@@ -662,7 +662,7 @@ void APICallback_TryAuth_CB(void)
                     break;
                 case PLATFORM_PS4: Localization_GetString(&string, STR_LOADPSN); break;
                 case PLATFORM_XB1: Localization_GetString(&string, STR_LOADXBOX); break;
-                case PLATFORM_SWITCH: Localization_GetString(&string, STR_LOADNINTENDO); break;
+                case PLATFORM_SWITCH: case PLATFORM_CTR: Localization_GetString(&string, STR_LOADNINTENDO); break;
             }
 
             EntityUIDialog *dialog = UIDialog_CreateDialogYesNo(&string, APICallback_TryAuth_Yes, APICallback_TryAuth_No, true, true);

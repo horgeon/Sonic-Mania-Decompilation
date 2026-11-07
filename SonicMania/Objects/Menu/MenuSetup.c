@@ -177,6 +177,7 @@ void MenuSetup_StageLoad(void)
             case PLATFORM_PS4: LogHelpers_Print("PS4 SKU"); break;
             case PLATFORM_XB1: LogHelpers_Print("XB1 SKU"); break;
             case PLATFORM_SWITCH: LogHelpers_Print("NX SKU"); break;
+            case PLATFORM_CTR: LogHelpers_Print("CTR SKU"); break;
             case PLATFORM_DEV: LogHelpers_Print("DEV SKU"); break;
             default: LogHelpers_Print("INVALID PLATFORM: %d", sku_platform); break;
         }
@@ -661,7 +662,7 @@ void MenuSetup_SetupActions(void)
     extras->processButtonInputCB = MenuSetup_Extras_ProcessButtonCB;
 
     options->menuSetupCB = MenuSetup_Options_MenuSetupCB;
-    if (sku_platform == PLATFORM_DEV || sku_platform == PLATFORM_SWITCH)
+    if (sku_platform == PLATFORM_DEV || sku_platform == PLATFORM_SWITCH || sku_platform == PLATFORM_CTR)
         options->yPressCB = MenuSetup_Options_LaunchManual;
     else
         MenuSetup->optionsPrompt->visible = false;

@@ -225,7 +225,7 @@ void OptionsMenu_SetupActions(void)
     videoControl_Win->yPressCB     = OptionsMenu_VideoControl_Win_YPressCB;
     videoControl_Win->backPressCB  = OptionsMenu_VideoControl_Win_BackPressCB;
 
-    if (sku_platform == PLATFORM_SWITCH || sku_platform == PLATFORM_DEV) {
+    if (sku_platform == PLATFORM_SWITCH || sku_platform == PLATFORM_CTR || sku_platform == PLATFORM_DEV) {
         optionsControl->yPressCB = OptionsMenu_ShowManual;
     }
     else {

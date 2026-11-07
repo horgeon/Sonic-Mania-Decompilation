@@ -624,6 +624,7 @@ typedef enum {
     PLATFORM_PS4,
     PLATFORM_XB1,
     PLATFORM_SWITCH,
+    PLATFORM_CTR,
 
     PLATFORM_DEV = 0xFF,
 } GamePlatforms;
