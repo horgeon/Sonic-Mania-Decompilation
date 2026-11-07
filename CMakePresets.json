@@ -1,0 +1,30 @@
+{
+    "version": 8,
+    "configurePresets": [
+        {
+            "name": "devkitARM_Debug",
+            "displayName": "devkitARM 3DS Docker (Debug)",
+            "description": "devkitARM 3DS Docker (Debug)",
+            "generator": "Ninja",
+            "binaryDir": "${sourceDir}/build/${presetName}",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Debug",
+                "CMAKE_TOOLCHAIN_FILE": "/opt/devkitpro/cmake/3DS.cmake",
+                "GAME_STATIC": "ON",
+                "RSDK_PATH": "dependencies/RSDKv5_3DS",
+                "RETRO_DISABLE_PLUS": "OFF"
+            }
+        },
+        {
+            "name": "devkitARM_Release",
+            "displayName": "devkitARM 3DS Docker (Release)",
+            "description": "devkitARM 3DS Docker (Release)",
+            "inherits": [
+                "devkitARM_Debug"
+            ],
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Release"
+            }
+        }
+    ]
+}

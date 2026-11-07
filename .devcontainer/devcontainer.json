@@ -1,0 +1,8 @@
+{
+  "image": "docker.io/devkitpro/devkitarm:latest",
+  "runArgs": [
+    "--userns=keep-id"
+  ],
+  "containerUser": "root",
+  "remoteUser": "root"
+}

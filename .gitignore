@@ -247,3 +247,5 @@ android/local.properties
 
 *.res
 dependencies/*
+
+CMakeSettings.json
